@@ -1,0 +1,18 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class destroy : MonoBehaviour
+{
+    private void OnCollisionEnter(Collision collisioninfo)
+    {
+
+        if (collisioninfo.collider.tag == "obstacle")
+        {
+            Destroy(GameObject.FindWithTag("obstacle"));
+        }
+
+
+
+    }
+}

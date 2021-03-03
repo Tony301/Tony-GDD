@@ -46,19 +46,20 @@ public class color : MonoBehaviour
         {
             cubeRenderer.material.SetColor("_Color", Color.black);
         }
+        if (x == 7)
+        {
+            cubeRenderer.material.SetColor("_Color", Color.cyan);
+
+        }
+
         if (x == 6)
         {
             cubeRenderer.material.SetColor("_Color", Color.magenta);
             
         }
-        if (x == 7)
-        {
-            cubeRenderer.material.SetColor("_Color", Color.cyan);
-            
-        }
+        
 
-
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         StartCoroutine("colorchanger");
     }
    

@@ -18,8 +18,8 @@ public class color : MonoBehaviour
     }
     IEnumerator colorchanger()
     {
-        
-        x = x + 1;
+
+        x = Random.Range(0, 8);
         if (x==0)
         {
             cubeRenderer.material.SetColor("_Color", Color.red);
@@ -40,10 +40,24 @@ public class color : MonoBehaviour
         if (x == 4)
         {
             cubeRenderer.material.SetColor("_Color", Color.blue);
-            x = 0;
+            
         }
-        
-        
+        if (x == 5)
+        {
+            cubeRenderer.material.SetColor("_Color", Color.black);
+        }
+        if (x == 6)
+        {
+            cubeRenderer.material.SetColor("_Color", Color.magenta);
+            
+        }
+        if (x == 7)
+        {
+            cubeRenderer.material.SetColor("_Color", Color.cyan);
+            
+        }
+
+
         yield return new WaitForSeconds(2);
         StartCoroutine("colorchanger");
     }
